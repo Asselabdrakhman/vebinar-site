@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0 → 20 | Қазақстан тарихынан вебинар</title>
+<meta name="description" content="11-сынып оқушыларына арналған тегін вебинар: Қазақстан тарихынан 0-ден 20 баллға дейін 1 жылда қалай дайындалуға болады?">
+<style>
+:root{
+  --navy:#0f172a;--blue:#2563eb;--cyan:#06b6d4;--yellow:#facc15;
+  --green:#10b981;--light:#f8fafc;--muted:#64748b;--white:#fff;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--light);color:var(--navy);line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(15,23,42,.94);backdrop-filter:blur(12px);color:#fff}
+.nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:20px}.logo span{color:var(--yellow)}
+.nav-btn{background:var(--yellow);color:var(--navy);padding:10px 18px;border-radius:999px;font-weight:800}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#172554 55%,#2563eb 100%);color:#fff;padding:80px 0 90px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+.badge{display:inline-flex;padding:8px 14px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.08);font-weight:700;font-size:14px}
+h1{font-size:clamp(44px,7vw,78px);line-height:.98;margin:20px 0 18px;letter-spacing:-3px}
+h1 span{color:var(--yellow)}
+.hero h2{font-size:clamp(21px,3vw,32px);margin:0 0 18px;line-height:1.15}
+.hero p{font-size:18px;color:#dbeafe;max-width:700px}
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+.meta div{padding:11px 15px;border-radius:12px;background:rgba(255,255,255,.1)}
+.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--yellow);color:var(--navy);padding:16px 26px;border-radius:14px;font-weight:900;font-size:17px;box-shadow:0 12px 35px rgba(0,0,0,.22)}
+.cta:hover{transform:translateY(-2px)}
+.score-card{background:#fff;color:var(--navy);border-radius:28px;padding:30px;box-shadow:0 25px 70px rgba(0,0,0,.28);transform:rotate(2deg)}
+.score-card .big{font-size:86px;font-weight:950;line-height:1;color:var(--blue)}
+.score-card small{color:var(--muted);font-weight:700}
+.bar{height:12px;background:#e2e8f0;border-radius:99px;margin:18px 0;overflow:hidden}
+.bar div{height:100%;width:85%;background:linear-gradient(90deg,var(--cyan),var(--blue));border-radius:99px}
+section{padding:75px 0}
+.section-head{text-align:center;max-width:760px;margin:0 auto 42px}
+.section-head h2{font-size:38px;line-height:1.05;margin:0 0 12px;letter-spacing:-1px}
+.section-head p{color:var(--muted);font-size:17px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:25px;box-shadow:0 8px 25px rgba(15,23,42,.05)}
+.icon{font-size:30px}.card h3{margin:10px 0 8px;font-size:20px}.card p{color:var(--muted);margin:0}
+.dark{background:var(--navy);color:#fff}.dark .section-head p{color:#cbd5e1}
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{border-radius:20px;padding:24px;min-height:190px;background:#fff;color:var(--navy);position:relative}
+.step .num{font-size:13px;font-weight:900;color:var(--blue)}
+.step h3{font-size:24px;margin:8px 0}
+.step p{color:var(--muted);font-size:14px}
+.step:nth-child(2){margin-top:25px}.step:nth-child(3){margin-top:50px}.step:nth-child(4){margin-top:75px}
+.week{background:#eff6ff;border-left:5px solid var(--blue);padding:20px;border-radius:12px;margin:20px auto;max-width:850px}
+.week strong{display:block;margin-bottom:5px}
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:850px;margin:auto}
+.check{background:#fff;border:1px solid #e2e8f0;padding:16px 18px;border-radius:14px;font-weight:650}
+.check::first-letter{color:var(--green)}
+.form-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:start}
+.form-card{background:#fff;padding:30px;border-radius:24px;box-shadow:0 15px 45px rgba(15,23,42,.1)}
+label{display:block;font-weight:800;margin:0 0 7px}input{width:100%;padding:14px 15px;border:1px solid #cbd5e1;border-radius:12px;font-size:16px;margin-bottom:15px}button{border:0;cursor:pointer;width:100%;padding:16px;border-radius:13px;background:var(--blue);color:#fff;font-weight:900;font-size:17px}
+.success{display:none;background:#ecfdf5;color:#065f46;padding:15px;border-radius:12px;margin-top:14px}
+footer{background:#020617;color:#94a3b8;padding:28px 0;text-align:center;font-size:14px}
+@media(max-width:850px){
+ .hero-grid,.form-wrap{grid-template-columns:1fr}.score-card{transform:none;max-width:420px;margin:auto}
+ .cards{grid-template-columns:1fr 1fr}.roadmap{grid-template-columns:1fr 1fr}.step:nth-child(n){margin-top:0}
+}
+@media(max-width:560px){
+ .nav-btn{padding:8px 12px;font-size:13px}.hero{padding:55px 0 65px}h1{font-size:48px}
+ .cards,.roadmap,.checklist{grid-template-columns:1fr}section{padding:55px 0}.section-head h2{font-size:31px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="logo">0 <span>→</span> 20</div>
+    <a class="nav-btn" href="#register">Тегін тіркелу</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">🇰🇿 11-сынып оқушыларына арналған ТЕГІН вебинар</div>
+      <h1>0 <span>→</span> 20</h1>
+      <h2>Қазақстан тарихынан 1 жылда 20/20-ға қалай жетуге болады?</h2>
+      <p>Саған жай ғана «көбірек оқы» демейміз. Нені, қашан, қандай ретпен оқу керек екенін және оқығаныңды қалай ұмытпауға болатынын көрсетеміз.</p>
+      <div class="meta">
+        <div>📅 Күні: <b>___</b></div>
+        <div>⏰ Уақыты: <b>___</b></div>
+        <div>💻 Онлайн</div>
+      </div>
+      <a class="cta" href="#register">Вебинарға тегін тіркелу →</a>
+    </div>
+    <div class="score-card">
+      <small>Сенің мақсатың</small>
+      <div class="big">20/20</div>
+      <div class="bar"><div></div></div>
+      <b>36 апта. Бір жүйе. Бір мақсат.</b>
+      <p>Жоспар → түсіну → есте сақтау → қайталау → тест → қате → нәтиже.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Бұл вебинар саған керек, егер…</h2>
+      <p>Қазір қай деңгейде екенің маңызды емес. Маңыздысы — келесі қадамды білу.</p>
+    </div>
+    <div class="checklist">
+      <div class="check">✓ Қазір 0–10 балл аралығында болсаң</div>
+      <div class="check">✓ Қай тақырыптан бастарыңды білмесең</div>
+      <div class="check">✓ Оқығаныңды тез ұмытып қалсаң</div>
+      <div class="check">✓ Даталар мен тұлғаларды шатастырсаң</div>
+      <div class="check">✓ ҰБТ-ға дейін нақты жоспарың болмаса</div>
+      <div class="check">✓ 20/20 алғың келіп, бірақ жолын білмесең</div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+    <div class="section-head">
+      <h2>Вебинарда не білесің?</h2>
+      <p>60–75 минутта дайындықтың толық логикасын көресің.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="icon">🗺️</div><h3>36 апталық нақты карта</h3><p>Нені, қашан және қандай ретпен оқу керек екенін түсінесің.</p></div>
+      <div class="card"><div class="icon">🧠</div><h3>Жаттамай есте сақтау</h3><p>Дата, тұлға, оқиға және себеп-салдарды байланыстыру жүйесін көресің.</p></div>
+      <div class="card"><div class="icon">📕</div><h3>Қателермен жұмыс</h3><p>Әр қатені келесі баллға айналдыратын алгоритм аласың.</p></div>
+      <div class="card"><div class="icon">🔄</div><h3>«Оқыдым, ұмыттым»</h3><p>Қайталауды қалай ұйымдастыру керегін үйренесің.</p></div>
+      <div class="card"><div class="icon">📅</div><h3>Әр аптаның жоспары</h3><p>Апта ішінде оқу, тест, қате және қайталау қалай бөлінетінін көресің.</p></div>
+      <div class="card"><div class="icon">🔥</div><h3>Соңғы 2 ай</h3><p>ҰБТ алдында нені қайталап, қай жерде көбірек жұмыс істеу керегін білесің.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>36 апта. 4 кезең. Бір мақсат.</h2>
+      <p>Дайындықты бірден 20/20 деп емес, кезең-кезеңімен құрамыз.</p>
+    </div>
+    <div class="roadmap">
+      <div class="step"><div class="num">01 · 1–12 АПТА</div><h3>БАЗА</h3><p>Ежелгі Қазақстан → орта ғасырлар → Қазақ хандығына дейінгі негізгі жүйе.</p></div>
+      <div class="step"><div class="num">02 · 13–24 АПТА</div><h3>ЖҮЙЕЛЕУ</h3><p>Қазақ хандығы → отарлау → көтерілістер → Алаш → XX ғасыр басы.</p></div>
+      <div class="step"><div class="num">03 · 25–30 АПТА</div><h3>ҰБТ MODE</h3><p>Кеңестік кезең → тәуелсіздік + тест, карта, хронология және сәйкестендіру.</p></div>
+      <div class="step"><div class="num">04 · 31–36 АПТА</div><h3>20/20</h3><p>Әлсіз тақырыптар + қате дәптері + аралас тест + толық пробник.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="section-head">
+      <h2>Ал бір апта қалай өтеді?</h2>
+      <p>Үлкен жоспар күнделікті нақты әрекетке айналады.</p>
+    </div>
+    <div class="week">
+      <strong>Дүйсенбі–Сейсенбі</strong> Жаңа тақырып
+    </div>
+    <div class="week">
+      <strong>Сәрсенбі</strong> Дата + тұлға + тарихи байланыстар
+    </div>
+    <div class="week">
+      <strong>Бейсенбі</strong> Тақырыптық тест
+    </div>
+    <div class="week">
+      <strong>Жұма</strong> Қате талдауы: «Неге қате жібердім?»
+    </div>
+    <div class="week">
+      <strong>Сенбі–Жексенбі</strong> Қайталау + аралас тест + апталық анализ
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="register">
+  <div class="container form-wrap">
+    <div>
+      <div class="badge">🎁 ҚАТЫСУ ТЕГІН</div>
+      <h2 style="font-size:44px;line-height:1.05;margin:22px 0 15px">20/20-ға апаратын жолды бүгіннен баста.</h2>
+      <p style="font-size:18px;color:#cbd5e1">Атыңды және байланыс нөміріңді қалдыр. Вебинарға қосылу туралы ақпаратты жібереміз.</p>
+      <p style="color:#93c5fd">💡 Бұл блокты кейін WhatsApp, Telegram немесе Google Form сілтемесіне де ауыстыруға болады.</p>
+    </div>
+    <div class="form-card">
+      <form id="regForm">
+        <label for="name">Атың</label>
+        <input id="name" name="name" placeholder="Мысалы: Аружан" required>
+        <label for="contact">WhatsApp / телефон</label>
+        <input id="contact" name="contact" placeholder="+7 7XX XXX XX XX" required>
+        <button type="submit">Вебинарға тіркелу →</button>
+        <div class="success" id="success">Рақмет! Тіркелу деректерің дайын. Енді бұл форманы нақты WhatsApp/Telegram/Google Form жүйесіне қосуға болады.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Қазақстан тарихы ҰБТ дайындығы · 0 → 20
+</footer>
+
+<script>
+document.getElementById('regForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('success').style.display='block';
+});
+</script>
+</body>
+</html>
